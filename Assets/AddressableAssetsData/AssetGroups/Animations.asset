@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Animations
+  m_EditorClassIdentifier: 
+  m_GroupName: Animations
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 878e9b6f1012c084cbb96fccdd9cae47
+  m_SerializeEntries:
+  - m_GUID: 1f44e09f03b510e4ca4257c2608e8a46
+    m_Address: Assets/Animations/Character/Arthur/Attack/Attack_Combo_01_04_Anim.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Arthur_Attack4
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61f6c23e26398ce4fb873e72581de29a
+    m_Address: Assets/Animations/Character/Arthur/Attack/Attack_Combo_01_02_Anim.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Arthur_Attack2
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a504b51fdbc45c742b8e58c8ef61647e
+    m_Address: Assets/Animations/Character/Arthur/Attack/Attack_Combo_01_03_Anim.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Arthur_Attack3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7cb15fed9779ae43932120fa9039536
+    m_Address: Assets/Animations/Character/Arthur/Attack/Attack_Combo_01_01_Anim.FBX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Arthur_Attack1
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0e86e95569a5ea548af65ca5029d39c5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f28161a393c96284cb6b5df440fbd5a9, type: 2}
+    - {fileID: 11400000, guid: 5f5f6ba45ed2b5443b42c4d8f2144c15, type: 2}

@@ -22,6 +22,12 @@
         },
         {
             "m_Id": "e4eba973779e4dc194c39132ce1b29d1"
+        },
+        {
+            "m_Id": "194b0df4e09b4289b2ce6d091433089b"
+        },
+        {
+            "m_Id": "61ee3fa4683348369d0ca90db310d30b"
         }
     ],
     "m_GroupDatas": [],
@@ -77,6 +83,42 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode",
+    "m_ObjectId": "194b0df4e09b4289b2ce6d091433089b",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "StencilWrite (Custom Function)",
+    "m_DrawState": {
+        "m_Expanded": false,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 270.7751159667969,
+            "y": -144.68902587890626,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [],
+    "synonyms": [
+        "code",
+        "HLSL"
+    ],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SourceType": 1,
+    "m_FunctionName": "StencilWrite",
+    "m_FunctionSource": "",
+    "m_FunctionBody": "void StencilWrite() {\r\n    StencilRef = 1;       // 设置参考值为 1\r\n    StencilComp = Always; // 始终通过，写入 Stencil Buffer\r\n    StencilPass = Replace; // 替换当前的 Stencil 值\r\n}\r\n"
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "231f6b1ed7f84e309857f616fb7abb73",
@@ -116,6 +158,42 @@
     "m_ObjectId": "323ef9e2e0a748cf9d6681564d5c5c39",
     "m_Name": "",
     "m_ChildObjectList": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode",
+    "m_ObjectId": "61ee3fa4683348369d0ca90db310d30b",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "StencilTest (Custom Function)",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 271.0,
+            "y": 155.99998474121095,
+            "width": 208.00003051757813,
+            "height": 246.00001525878907
+        }
+    },
+    "m_Slots": [],
+    "synonyms": [
+        "code",
+        "HLSL"
+    ],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SourceType": 1,
+    "m_FunctionName": "StencilTest",
+    "m_FunctionSource": "",
+    "m_FunctionBody": "void StencilTest() {\r\n    StencilRef = 1;       // 设置参考值为 1\r\n    StencilComp = NotEqual; // 如果 Stencil 值不等于 1，跳过渲染\r\n    StencilPass = Keep;   // 如果通过，保持现有值\r\n}\r\n"
 }
 
 {
