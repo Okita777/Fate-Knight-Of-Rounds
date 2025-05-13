@@ -1,0 +1,25 @@
+{
+    "name": "AsiActionEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:72bbd18e87e026d4babf4b706d8f5382",
+        "GUID:4307f53044263cf4b835bd812fc161a4"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.cinemachine",
+            "expression": "",
+            "define": "Cinemachine"
+        }
+    ],
+    "noEngineReferences": false
+}

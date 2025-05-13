@@ -50,8 +50,8 @@ TagManager:
   - BlockAIRayCast
   - Pushable
   - CoverPoint
-  - 
-  - 
+  - Player
+  - Monster
   - 
   - 
   - 

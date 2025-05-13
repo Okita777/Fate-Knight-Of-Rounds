@@ -1,0 +1,300 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd14b100c92d49b2b81d6e5379d2195b, type: 3}
+  m_Name: WindowSetting
+  m_EditorClassIdentifier: 
+  colorWhite: {r: 1, g: 1, b: 1, a: 1}
+  colorSelection: {r: 1, g: 1, b: 1, a: 1}
+  colorFontDefault: {r: 1, g: 1, b: 1, a: 1}
+  colorFontTrack_Title: {r: 0, g: 0, b: 0, a: 1}
+  colorFontTrack_Detailed: {r: 1, g: 1, b: 1, a: 1}
+  colorTimeLineControl: {r: 1, g: 0.5998218, b: 0, a: 0.6117647}
+  colorEventTrackGroup: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+  colorEventTrack: {r: 1, g: 1, b: 1, a: 0.02745098}
+  colorEventTrackNull: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+  fontDefault:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 3
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  fontTrack_Title:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_Alignment: 4
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  fontTrack_Detailed:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_Alignment: 3
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  mTrackEvents:
+  - trackGroupName: " \u653B\u51FB\u76D2"
+    trackName: " \u653B\u51FB\u4E8B\u4EF6"
+    evenTypes:
+    - EET_AttackBox
+    trackColor: {r: 0, g: 0.86999655, b: 1, a: 1}
+    trackIcon:
+      m_Text: 
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+  - trackGroupName: " \u5355\u4F4D\u4E8B\u4EF6"
+    trackName: "\u4E8B\u4EF6"
+    evenTypes:
+    - EET_RootWeight
+    - EET_CharacterGravity
+    - EET_UnitRot
+    - EET_CharacterOnMove
+    - EET_SetAnimFloat
+    - EET_Attach
+    - EET_SoftLock
+    - EET_Lable
+    - EET_ActionDebug
+    - EET_SetGValue
+    - EET_TimeScale
+    - EET_RaycastHit
+    - EET_TargetingMove
+    - EET_CharacterAddForce
+    - EET_SetPointData
+    - EET_TowBoneIK
+    - EET_Event_FindTargetToSphere
+    - EET_RayCast
+    - EET_SetGvalue_Transform
+    - EET_SetGFloat
+    - EET_SetGInt
+    - EET_SetGPoint
+    trackColor: {r: 0.90392107, g: 0.6179246, b: 1, a: 1}
+    trackIcon:
+      m_Text: 
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+  - trackGroupName: " \u52A8\u4F5C\u7EC4"
+    trackName: "\u52A8\u4F5C\u8F68\u9053"
+    evenTypes:
+    - EET_Interrupt
+    trackColor: {r: 0.3915094, g: 0.699334, b: 1, a: 1}
+    trackIcon:
+      m_Text: 
+      m_Image: {fileID: 10910, guid: 0000000000000000f000000000000000, type: 0}
+      m_Tooltip: 
+  - trackGroupName: " \u955C\u5934\u7EC4"
+    trackName: "\u52A8\u753B\u8F68\u9053"
+    evenTypes:
+    - EET_CameraChange
+    trackColor: {r: 0.6411455, g: 0.514151, b: 1, a: 1}
+    trackIcon:
+      m_Text: 
+      m_Image: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+      m_Tooltip: 
+  - trackGroupName: " \u7279\u6548\u7EC4"
+    trackName: "\u7279\u6548\u8F68\u9053"
+    evenTypes:
+    - EET_Partocle
+    trackColor: {r: 1, g: 0.619745, b: 0, a: 1}
+    trackIcon:
+      m_Text: 
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+  - trackGroupName: " \u97F3\u6548\u7EC4"
+    trackName: "\u97F3\u6548\u8F68\u9053"
+    evenTypes:
+    - EET_Audio
+    trackColor: {r: 0, g: 1, b: 0.625, a: 1}
+    trackIcon:
+      m_Text: 
+      m_Image: {fileID: 0}
+      m_Tooltip: 

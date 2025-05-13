@@ -1,0 +1,26 @@
+{
+    "name": "ActionEditor_Ex_RunTime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:72bbd18e87e026d4babf4b706d8f5382",
+        "GUID:50e5e300ee1bc8c458e7b4f757c29ab7",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:7c88a4a7926ee5145ad2dfa06f454c67",
+        "GUID:30817c1a0e6d646d99c048fc403f5979"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.cinemachine",
+            "expression": "",
+            "define": "Cinemachine"
+        }
+    ],
+    "noEngineReferences": false
+}
