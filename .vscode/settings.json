@@ -2,7 +2,9 @@
     "files.exclude": {
         "**/.DS_Store": true,
         "**/.git": true,
+        "**/.vs": true,
         "**/.gitmodules": true,
+        "**/.vsconfig": true,
         "**/*.booproj": true,
         "**/*.pidb": true,
         "**/*.suo": true,
@@ -47,9 +49,19 @@
         "library/": true,
         "obj/": true,
         "Obj/": true,
+        "Logs/": true,
+        "logs/": true,
         "ProjectSettings/": true,
+        "UserSettings/": true,
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Fate Knight Of Rounds.sln"
+    "dotnet.defaultSolution": "Fate Knight Of Rounds.sln",
+    "omnisharp.useModernNet": false,
+    "omnisharp.dotnetPath": "C:\\Program Files\\dotnet\\dotnet.exe",
+    "editor.formatOnSave": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "csharp.format.enable": true,
+    "dotnet.formatting.organizeImportsOnFormat": true
 }

@@ -10,12 +10,14 @@ public class PlayerActionManager : MonoBehaviour
     private PlayerStateManager state;
     private PlayerAnimatorManager anim;
     private PlayerPhysicsHandler physics;
+    private int comboIndex = 0; // 连招索引
 
     void Awake()
     {
         state = GetComponent<PlayerStateManager>();
         anim = GetComponent<PlayerAnimatorManager>();
         physics = GetComponent<PlayerPhysicsHandler>();
+           comboIndex = 0; // 初始化连招索引
     }
 
     /// <summary>

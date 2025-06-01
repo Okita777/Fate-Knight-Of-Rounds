@@ -13,6 +13,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     private int isDodgingHash;
     private int comboIndexHash;
     private int isGroundedHash;
+    private int rootMotionWeightHash;
 
     void Awake()
     {

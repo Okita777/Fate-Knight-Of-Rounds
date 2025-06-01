@@ -141,7 +141,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Avatar_Female_Size02_Anbi_Ani_Attack_Normal_01
-  m_Speed: 0.9996073
+  m_Speed: 0.9924672
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -250,34 +250,34 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -3912938607690327653}
-    m_Position: {x: 414.80005, y: 131.37143, z: 0}
+    m_Position: {x: 370, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6314191232951179517}
-    m_Position: {x: 424.80005, y: 141.37143, z: 0}
+    m_Position: {x: 360, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4487385852120685785}
-    m_Position: {x: 434.80005, y: 151.37143, z: 0}
+    m_Position: {x: 230, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4152170784865813168}
-    m_Position: {x: 444.80005, y: 161.37143, z: 0}
+    m_Position: {x: 470, y: 350, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8939282079288975109}
-    m_Position: {x: 454.80005, y: 171.37143, z: 0}
+    m_Position: {x: 450, y: 440, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5225883482378907494}
-    m_Position: {x: 464.80005, y: 181.37143, z: 0}
+    m_Position: {x: 390, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4641351983773112760}
-    m_Position: {x: 474.80005, y: 191.37143, z: 0}
+    m_Position: {x: 440, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2092538248732452129}
-    m_Position: {x: 484.80005, y: 201.37143, z: 0}
+    m_Position: {x: 480, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5795221271657564147}
-    m_Position: {x: 494.80005, y: 211.37143, z: 0}
+    m_Position: {x: 390, y: 560, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5035681211546394232}
-    m_Position: {x: 504.80005, y: 221.37143, z: 0}
+    m_Position: {x: 290, y: 500, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8378807251773422549}
     m_Position: {x: 514.80005, y: 231.37143, z: 0}
@@ -494,19 +494,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3953827993575332304}
-    m_Position: {x: 393.08575, y: 116.17142, z: 0}
+    m_Position: {x: 360, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9055030001677240638}
-    m_Position: {x: 403.08575, y: 126.17142, z: 0}
+    m_Position: {x: 390, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2751088872594195995}
-    m_Position: {x: 413.08575, y: 136.17142, z: 0}
+    m_Position: {x: 450, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6410957672764577415}
-    m_Position: {x: 423.08575, y: 146.17142, z: 0}
+    m_Position: {x: 270, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5628447363915670872}
-    m_Position: {x: 433.08575, y: 156.17142, z: 0}
+    m_Position: {x: 540, y: 270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1889278115229626014}
     m_Position: {x: 443.08575, y: 166.17142, z: 0}
@@ -516,6 +516,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 5339427173521008791}
     m_Position: {x: 364.00006, y: 331.37143, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 5288383951397829626}
+    m_Position: {x: 431.08575, y: 457.08575, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -715,6 +718,33 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &5288383951397829626
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lucy_Jump_Loop_Inplace
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 2971803845777607359, guid: 87637fbcbc83e3740952f36d261361e9,
+    type: 3}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &5339427173521008791
 AnimatorState:
   serializedVersion: 6
@@ -750,7 +780,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Avatar_Female_Size02_Anbi_Ani_TurnBack
-  m_Speed: 1
+  m_Speed: 1.0000001
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -881,7 +911,7 @@ AnimatorStateMachine:
     m_Position: {x: 360, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 612239693423868330}
-    m_Position: {x: 415.02863, y: 118.57144, z: 0}
+    m_Position: {x: 420, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

@@ -1,0 +1,43 @@
+root = true
+
+[*.cs]
+charset = utf-8
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Unity 常规习惯：using System 排最上面
+dotnet_sort_system_directives_first = true
+
+# 大括号另起一行（常见 Unity 官方项目风格）
+csharp_new_line_before_open_brace = all
+
+# 缩进规则
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_labels = no_change
+
+# 空行规则
+csharp_new_line_between_query_expression_clauses = true
+
+# 表达式换行规则（防止一行太长）
+csharp_preserve_single_line_blocks = false
+csharp_preserve_single_line_statements = false
+
+# 禁用 var，强制显示类型（如果你喜欢可以改成 true）
+dotnet_style_qualification_for_field = true:suggestion
+dotnet_style_qualification_for_property = true:suggestion
+dotnet_style_qualification_for_method = true:suggestion
+dotnet_style_qualification_for_event = true:suggestion
+
+# 字段和变量命名规范（可选）
+dotnet_naming_rule.private_fields_should_be_camel_case.severity = suggestion
+dotnet_naming_rule.private_fields_should_be_camel_case.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camel_case.style = camel_case
+
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.required_modifiers = readonly
+
+dotnet_naming_style.camel_case.capitalization = camel_case
