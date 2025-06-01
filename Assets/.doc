@@ -1,0 +1,200 @@
+Unity游戏项目Git分支管理实践指南
+
+1. 项目初始化配置
+A. Git LFS 配置
+B. 完善 .gitignore
+
+2. 分支管理策略
+A. 分支结构
+main                    # 生产环境分支 (当前线上版本)
+├── release/v1.0.x     # 维护分支 (当前版本维护)
+├── release/v1.1.0     # 下一版本分支 (即将发布)
+├── release/v1.2.0     # 未来版本分支 (开发中)
+└── develop            # 最新开发分支 (1.3.0+)
+    ├── feature/combat-system
+    ├── feature/ui-redesign
+    └── feature/multiplayer
+
+B. 版本号规范
+语义化版本: Major.Minor.Patch
+
+Major (1.x.x): 大版本更新
+- 新赛季/新章节
+- 核心玩法变更
+- 重大系统重构
+
+Minor (x.1.x): 功能更新
+- 新角色/新武器
+- 新游戏模式
+- 新功能系统
+
+Patch (x.x.1): 修复更新
+- Bug修复
+- 平衡调整
+- 小优化
+
+3. 工作流程
+A. 项目初始化
+# 1. 克隆项目
+git clone <repository-url>
+cd <project-name>
+
+# 2. 安装Git LFS
+git lfs install
+git lfs pull
+
+# 3. 检出开发分支
+git checkout develop
+git pull origin develop
+
+B. 功能开发流程
+# 1. 创建功能分支 (从develop或目标release分支)
+git checkout develop  # 或 git checkout release/v1.1.0
+git pull origin develop
+git checkout -b feature/player-combat
+
+# 2. 开发过程
+# 频繁提交，保持小粒度
+git add .
+git commit -m "feat: 添加基础攻击系统"
+git commit -m "feat: 实现连击机制"
+git commit -m "feat: 添加攻击特效"
+
+# 3. 推送到远程
+git push origin feature/player-combat
+
+# 4. 创建Pull Request进行代码审查
+# 通过GitHub/GitLab等平台创建PR
+
+# 5. 合并完成后清理
+git checkout develop
+git pull origin develop
+git branch -d feature/player-combat
+git push origin --delete feature/player-combat
+
+C. 版本发布流程
+# 1. 创建Release分支 (每个大版本一个)
+git checkout develop
+git pull origin develop
+git checkout -b release/v1.1.0
+
+# 2. 版本稳定化 (bug修复、平衡调整)
+git commit -m "fix: 修复战斗系统bug"
+git commit -m "balance: 调整武器伤害"
+
+# 3. 版本发布
+git checkout main
+git pull origin main
+git merge --no-ff release/v1.1.0
+git tag -a v1.1.0 -m "Version 1.1.0 - Combat System Update"
+
+# 4. 推送到生产环境
+git push origin main
+git push origin --tags
+
+# 5. 同步修改回develop
+git checkout develop
+git merge --no-ff release/v1.1.0
+git push origin develop
+
+D. 紧急修复流程
+# 1. 从main创建hotfix分支
+git checkout main
+git pull origin main
+git checkout -b hotfix/critical-bug-v1.0.1
+
+# 2. 修复bug
+git commit -m "hotfix: 修复游戏崩溃问题"
+
+# 3. 发布修复版本
+git checkout main
+git merge --no-ff hotfix/critical-bug-v1.0.1
+git tag -a v1.0.1 -m "Hotfix v1.0.1 - Critical bug fix"
+git push origin main --tags
+
+# 4. 同步到所有相关分支
+git checkout develop
+git merge --no-ff hotfix/critical-bug-v1.0.1
+git push origin develop
+
+git checkout release/v1.1.0
+git merge --no-ff hotfix/critical-bug-v1.0.1
+git push origin release/v1.1.0
+
+# 5. 清理hotfix分支
+git branch -d hotfix/critical-bug-v1.0.1
+git push origin --delete hotfix/critical-bug-v1.0.1
+
+4. 提交规范
+A. 提交消息格式
+<type>(<scope>): <description>
+
+[optional body]
+
+[optional footer]
+
+B. Type类型
+feat:     新功能
+fix:      bug修复
+docs:     文档更新
+style:    代码格式调整
+refactor: 代码重构
+perf:     性能优化
+test:     测试相关
+build:    构建系统
+ci:       CI/CD配置
+chore:    其他杂项
+
+C. 实例
+# 功能开发
+git commit -m "feat(combat): 实现连击系统"
+git commit -m "feat(ui): 添加设置界面"
+
+# Bug修复
+git commit -m "fix(player): 修复角色卡墙问题"
+git commit -m "fix(audio): 解决音效重叠bug"
+
+# 优化
+git commit -m "perf(render): 优化渲染性能"
+git commit -m "refactor(inventory): 重构背包系统"
+
+5. 团队协作规范
+A. 分支保护规则
+# main分支保护
+- 禁止直接推送
+- 需要Pull Request审查
+- 需要CI构建通过
+- 需要至少1个审查者
+
+# release分支保护  
+- 禁止强制推送
+- 需要Pull Request
+- 自动化测试必须通过
+
+7. 常用命令速查
+# 日常操作
+git status                           # 查看状态
+git log --oneline --graph           # 查看提交历史
+git stash                           # 暂存当前修改
+git stash pop                       # 恢复暂存修改
+
+# 分支操作
+git branch -a                       # 查看所有分支
+git checkout -b feature/new-feature  # 创建并切换分支
+git branch -d feature/old-feature   # 删除本地分支
+git push origin --delete feature/old # 删除远程分支
+
+# LFS操作
+git lfs ls-files                    # 查看LFS文件
+git lfs pull                        # 拉取LFS文件
+git lfs prune                       # 清理LFS缓存
+
+# 版本管理
+git tag -l                          # 查看所有标签
+git tag -a v1.0.0 -m "Release v1.0.0" # 创建标签
+git push origin --tags              # 推送标签
+
+# 紧急情况
+git reflog                          # 查看操作历史
+git reset --hard HEAD~1             # 撤销最后一次提交
+git revert <commit-hash>            # 安全撤销提交
