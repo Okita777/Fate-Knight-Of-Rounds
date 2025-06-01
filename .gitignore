@@ -72,3 +72,87 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# === 以下是新增补充配置 ===
+
+# Unity Package Manager
+/[Pp]ackages/packages-lock.json
+
+# Unity Test Runner
+/[Aa]ssets/[Tt]ests.meta
+/[Aa]ssets/[Tt]ests/
+
+# JetBrains Rider
+.idea/
+
+# Mac OS
+.DS_Store*
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.temp
+*~
+
+# Build outputs
+*.exe
+*.dmg
+*.pkg
+*.msi
+
+# Analytics & Third Party SDKs
+/[Aa]ssets/[Pp]lugins/[Aa]nalytics/
+/[Aa]ssets/[Gg]oogle[Mm]obile[Aa]ds/
+/[Aa]ssets/[Ff]acebook/
+
+# Local Development Files
+.vscode/
+*.code-workspace
+
+# === 动画系统相关补充 ===
+
+# Unity动画临时文件
+*.anim.meta~
+*.controller.meta~
+
+# 动画烘焙缓存
+/[Aa]ssets/[Aa]nimations/[Bb]aked/
+/[Aa]ssets/[Aa]nimations/[Cc]ache/
+
+# Mecanim预览缓存
+*.preview
+
+# Timeline临时文件  
+*.playable.meta~
+*.timeline.meta~
+
+# 动画事件临时文件
+*.animationevent.meta~
+
+# === Addressable资源管理相关 ===
+
+# Addressable构建缓存
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/[Bb]uild/
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/[Cc]ache/
+
+# Addressable临时文件
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.json
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/catalog_*.hash
+
+# Addressable Reports
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/[Rr]eports/
+
+# Remote Build Path (CDN相关)
+/[Ss]erver[Dd]ata/
+/[Rr]emote[Bb]uild/
+
+# Local Build Path  
+/[Ll]ocal[Bb]uild/
+
+# Addressable Schemas临时文件
+*.schema.temp
