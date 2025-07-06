@@ -1,0 +1,122 @@
+{
+    "name": "PlayerControl",
+    "maps": [
+        {
+            "name": "PlayerCamera",
+            "id": "79ba8139-baae-4c94-869a-a9b709fd3bf1",
+            "actions": [
+                {
+                    "name": "CameraInput",
+                    "type": "PassThrough",
+                    "id": "dc4a7504-8891-4f63-b653-29d30ca73251",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "686ea5cf-24ec-4fdb-84c9-fb14bf4807e2",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "PlayerMovement",
+            "id": "422c9be1-6a64-4a51-badb-a784cd313f44",
+            "actions": [
+                {
+                    "name": "Forward",
+                    "type": "Button",
+                    "id": "0b0a82d0-9d24-4cb5-92f2-58da2a38d85e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Back",
+                    "type": "Button",
+                    "id": "6fbb591f-14c3-465c-a659-57d24cd6a8ec",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "3b519c02-a1de-4b28-a28c-1dda5795d034",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right",
+                    "type": "Button",
+                    "id": "1c3cee46-ed4e-4637-bbcd-a9921388dce2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0cad27fe-1468-449e-9ab6-08883c721cef",
+                    "path": "<Keyboard>/#(W)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Forward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d39cf8f3-8230-4290-bf81-1c6efc40f234",
+                    "path": "<Keyboard>/#(S)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88c2577c-fc69-48c1-ad92-9c749a5320d7",
+                    "path": "<Keyboard>/#(A)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cdbbd280-e4ba-4511-82fc-1cb3ac69a81d",
+                    "path": "<Keyboard>/#(D)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

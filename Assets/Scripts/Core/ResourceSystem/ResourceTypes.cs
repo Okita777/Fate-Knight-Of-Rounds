@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -18,7 +17,7 @@ namespace ResourceSystem.Core
     }
 
     /// <summary>
-    /// 预加载组数据
+    /// 预加载组
     /// </summary>
     [System.Serializable]
     public class PreloadGroup
@@ -27,7 +26,42 @@ namespace ResourceSystem.Core
         public List<string> Addresses;
         public PreloadPriority Priority;
         public PreloadStatus Status;
-        public int LoadedCount;
+    }
+
+    /// <summary>
+    /// 资源包配置
+    /// </summary>
+    [System.Serializable]
+    public class ResourcePackConfig
+    {
+        [Header("基础信息")]
+        public string PackName;
+        public string Description;
+        public PreloadPriority Priority = PreloadPriority.Normal;
+
+        [Header("资源列表")]
+        public List<string> AssetAddresses = new List<string>();
+
+        [Header("依赖关系")]
+        public List<string> Dependencies = new List<string>();
+
+        [Header("可选配置")]
+        public bool AutoLoad = false;
+        public bool PersistentLoad = false; // 是否持久化加载（不自动释放）
+
+        public ResourcePackConfig()
+        {
+            AssetAddresses = new List<string>();
+            Dependencies = new List<string>();
+        }
+
+        public ResourcePackConfig(string packName, List<string> addresses, PreloadPriority priority = PreloadPriority.Normal)
+        {
+            PackName = packName;
+            AssetAddresses = new List<string>(addresses);
+            Priority = priority;
+            Dependencies = new List<string>();
+        }
     }
 
     /// <summary>
@@ -37,8 +71,7 @@ namespace ResourceSystem.Core
     {
         Low = 0,
         Normal = 1,
-        High = 2,
-        Critical = 3
+        High = 2
     }
 
     /// <summary>
@@ -53,40 +86,29 @@ namespace ResourceSystem.Core
     }
 
     /// <summary>
-    /// 资源加载状态
-    /// </summary>
-    public enum ResourceLoadStatus
-    {
-        NotLoaded,
-        Loading,
-        Loaded,
-        Failed
-    }
-
-    /// <summary>
     /// 资源缓存信息
     /// </summary>
     [System.Serializable]
     public class ResourceCacheInfo
     {
         public int CachedAssetCount;
-        public int LoadingOperationCount;
-        public int PreloadGroupCount;
         public int TotalReferenceCount;
+        public int PreloadGroupCount;
     }
 
     /// <summary>
-    /// 资源包配置
+    /// 资源包类型枚举
     /// </summary>
-    [System.Serializable]
-    public class ResourcePackConfig
+    public enum ResourcePackType
     {
-        public string PackName;
-        public List<string> AssetAddresses;
-        public string Description;
-        public bool AutoLoad;
-        public PreloadPriority Priority;
+        UI,           // UI资源包
+        Audio,        // 音频资源包
+        Scene,        // 场景资源包
+        Character,    // 角色资源包
+        Effect,       // 特效资源包
+        Texture,      // 贴图资源包
+        Model,        // 模型资源包
+        Animation,    // 动画资源包
+        Custom        // 自定义资源包
     }
 }
-
-

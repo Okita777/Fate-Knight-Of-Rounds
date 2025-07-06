@@ -12,15 +12,23 @@ namespace ResourceSystem.Core
     public class ResourcePackManager : MonoBehaviour
     {
         private static ResourcePackManager _instance;
+        private static readonly object _packLock = new object();
+
         public static ResourcePackManager Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    GameObject go = new GameObject("ResourcePackManager");
-                    _instance = go.AddComponent<ResourcePackManager>();
-                    DontDestroyOnLoad(go);
+                    lock (_packLock)
+                    {
+                        if (_instance == null)
+                        {
+                            GameObject go = new GameObject("ResourcePackManager");
+                            _instance = go.AddComponent<ResourcePackManager>();
+                            DontDestroyOnLoad(go);
+                        }
+                    }
                 }
                 return _instance;
             }
@@ -175,4 +183,3 @@ namespace ResourceSystem.Core
         }
     }
 }
-

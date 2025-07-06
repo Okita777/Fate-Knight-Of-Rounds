@@ -61,6 +61,12 @@ namespace ResourceSystem.Core
         /// </summary>
         public void RecyclePrefabInstance(GameObject instance)
         {
+            if (instance == null)
+            {
+                LogWarning("Trying to recycle null instance");
+                return;
+            }
+
             if (_instanceToAddress.TryGetValue(instance, out string address))
             {
                 if (!_prefabPools.ContainsKey(address))
@@ -68,15 +74,59 @@ namespace ResourceSystem.Core
                     _prefabPools[address] = new Queue<GameObject>();
                 }
 
+                // 🚨 修复：重置实例状态
                 instance.SetActive(false);
                 instance.transform.SetParent(null);
+                instance.transform.position = Vector3.zero;
+                instance.transform.rotation = Quaternion.identity;
+                instance.transform.localScale = Vector3.one;
+
                 _prefabPools[address].Enqueue(instance);
+
+                Log($"Recycled instance to pool: {address}");
             }
             else
             {
                 // 非池化对象直接销毁
                 UnityEngine.Object.Destroy(instance);
+                Log("Destroyed non-pooled instance");
             }
+        }
+
+        // 🚨 添加：清理所有对象池
+        public void ClearAllPools()
+        {
+            foreach (var kvp in _prefabPools)
+            {
+                ClearPool(kvp.Key);
+            }
+
+            _prefabPools.Clear();
+            _instanceToAddress.Clear();
+
+            Log("Cleared all prefab pools");
+        }
+
+        // 🚨 添加：获取对象池状态
+        public Dictionary<string, int> GetPoolStatus()
+        {
+            Dictionary<string, int> status = new Dictionary<string, int>();
+            foreach (var kvp in _prefabPools)
+            {
+                status[kvp.Key] = kvp.Value.Count;
+            }
+            return status;
+        }
+
+        // 🚨 添加：日志方法
+        private void Log(string message)
+        {
+            Debug.Log($"[PrefabResourceLoader] {message}");
+        }
+
+        private void LogWarning(string message)
+        {
+            Debug.LogWarning($"[PrefabResourceLoader] {message}");
         }
 
         /// <summary>
